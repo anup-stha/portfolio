@@ -1,26 +1,104 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafafa;
+  --foreground: #09090b;
+
+  /* ink scale */
+  --ink: #09090b;
+  --ink-soft: #52525b;
+  --gray: #71717a;
+  --gray-light: #a1a1aa;
+  --black: #050505;
+
+  /* footer (dark surface) text */
+  --footer-secondary: #d4d4d8;
+  --footer-muted: #8b8b94;
+
+  /* pill palette */
+  --yellow: #fdcf00;
+  --orange: #ff894a;
+  --lavender: #d9c9ff;
+  --pink: #fbcfe8;
+  --mint: #5adba5;
+  --lime: #d9f99d;
+  --sky: #a3d9ff;
+  --zinc: #f4f4f5;
+
+  --radius-card: 48px;
+
+  /* chip / pill elevation, shared by nav, pills, and CTAs */
+  --shadow-chip: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+  /* sheet sections lifting over the surface beneath them */
+  --shadow-sheet: 0 -1px 2px rgba(0, 0, 0, 0.06), 0 -8px 24px rgba(0, 0, 0, 0.08);
+
+  /* z-index scale: section content (z-10) < nav < progress < menu */
+  --z-nav: 40;
+  --z-progress: 50;
+  --z-menu: 60; /* full-screen takeover menu; nav bar rides at +1 while open */
+
+  /* legacy aliases (components migrated to semantic names; keep until swap done) */
+  --font-geist-sans: var(--font-body);
+  --font-geist-mono: var(--font-mono-accent);
+  --font-serif-display: var(--font-display);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-gray-mid: var(--gray);
+  --color-yellow-brand: var(--yellow);
+  --color-orange-brand: var(--orange);
+  --color-lavender-brand: var(--lavender);
+  --color-pink-brand: var(--pink);
+  --color-mint-brand: var(--mint);
+  --color-lime-brand: var(--lime);
+  --color-sky-brand: var(--sky);
+  --color-zinc-brand: var(--zinc);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-mono-accent);
+  --font-serif: var(--font-display);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
