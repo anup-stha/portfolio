@@ -32,19 +32,19 @@ export const metadata: Metadata = {
       "Design systems, AI platforms, and production frontends. I design the product, then I build it.",
     images: [
       {
-        url: "/anup.jpg",
-        width: 768,
-        height: 768,
-        alt: "Portrait of Anup Shrestha",
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Line-art portrait of Anup Shrestha, Design Engineer",
       },
     ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Anup Shrestha · Design Engineer",
     description:
       "Design systems, AI platforms, and production frontends. I design the product, then I build it.",
-    images: ["/anup.jpg"],
+    images: ["/og.png"],
   },
 };
 
