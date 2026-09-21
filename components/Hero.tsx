@@ -116,6 +116,15 @@ export default function Hero() {
 
 	return (
 		<section className="relative flex min-h-[100svh] w-full flex-col">
+			{/* Spotlight: clears the dotted background into a soft circle behind the copy */}
+			<div
+				aria-hidden="true"
+				className="pointer-events-none absolute inset-0"
+				style={{
+					background:
+						"radial-gradient(circle at 50% 50%, var(--background) 0%, var(--background) 28%, rgba(250,250,250,0) 52%)",
+				}}
+			/>
 			<Nav />
 
 			{/* -------- Editorial line art --------
@@ -196,15 +205,11 @@ export default function Hero() {
 					transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
 					className="mt-7 text-[16px] leading-relaxed text-[color:var(--gray)]"
 				>
-					Currently building{" "}
+					Currently building an{" "}
 					<strong className="font-medium text-[color:var(--ink-soft)]">
-						AI drug-development workflows
-					</strong>{" "}
-					and a reusable{" "}
-					<strong className="font-medium text-[color:var(--ink-soft)]">
-						design system
+						autonomous drug-development platform
 					</strong>
-					.
+					, powered by AI.
 				</motion.p>
 
 				<motion.a

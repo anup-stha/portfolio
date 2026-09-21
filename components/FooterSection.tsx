@@ -83,8 +83,8 @@ const iconProps = {
 const socials = [
   {
     label: "Email",
-    ariaLabel: "Email Anup",
-    href: "mailto:works.anupstha@gmail.com",
+    ariaLabel: "Send me a message",
+    href: "#contact",
     icon: (
       <svg {...iconProps}>
         <rect x="3" y="5" width="18" height="14" rx="2.5" />
@@ -130,6 +130,7 @@ export default function FooterSection() {
     <>
       {/* -------- Black footer -------- */}
       <footer
+        id="contact"
         className="relative"
         style={{ background: "var(--black, #050505)", color: "#fafafa" }}
       >

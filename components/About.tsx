@@ -104,6 +104,15 @@ export default function About() {
 			aria-label="About Anup"
 			className="relative flex min-h-[100svh] items-center px-6 py-16 sm:px-10"
 		>
+			{/* Spotlight: clears the dotted background into a soft circle behind the copy */}
+			<div
+				aria-hidden="true"
+				className="pointer-events-none absolute inset-0 -z-10"
+				style={{
+					background:
+						"radial-gradient(circle at 50% 50%, var(--background) 0%, var(--background) 28%, rgba(250,250,250,0) 52%)",
+				}}
+			/>
 			<AboutFigure
 				src="/about/poker-hand.webp"
 				className="bottom-[6%] left-[2vw] w-[clamp(190px,15vw,260px)]"
@@ -181,9 +190,9 @@ export default function About() {
 							Six years of shipping products end to end: a core banking
 							system that launched with 26 cooperative organizations, the
 							world&rsquo;s largest AI red-teaming competition with thousands
-							of live participants, and now AI-assisted drug development at
-							DVLP Medicines, where I design the platform and build its front
-							end. Every one of those shipped with a design system I built
+							of live participants, and now
+							AI-assisted product work where I design the platform and build its
+							front end. Every one of those shipped with a design system I built
 							along the way. I like when things match.
 						</p>
 						<p

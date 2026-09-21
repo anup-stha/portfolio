@@ -40,183 +40,6 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
-    id: "dvlp",
-    name: "DVLP Studio \u00b7 Platform",
-    year: "2024-Present",
-    title: "DVLP Studio",
-    blurb:
-      "An AI platform that drafts pharmaceutical proposals from structured and unstructured data, with agentic pipelines and real-time collaboration.",
-    headline:
-      "An AI platform that drafts pharmaceutical proposals from structured and unstructured data",
-    stats: [
-      "Full design system",
-      "MUI \u2192 Tailwind migration",
-      "Agentic document pipelines",
-      "Real-time Matrix collaboration",
-    ],
-    tint: "#fff4ec",
-    chipBg: "#f97316",
-    chipGlyph: "spark",
-    cardBg: "#ffffff",
-    stack: "Next.js 16 \u00b7 React 19 \u00b7 Go (Gin) \u00b7 Python (FastAPI \u00b7 LangChain) \u00b7 PostgreSQL \u00b7 Neo4j \u00b7 Matrix \u00b7 Hyperledger \u00b7 AWS",
-    caseStudyHref: "/work/dvlp-studio",
-    screenshots: [
-      {
-        src: "/work/studio-01.webp",
-        alt: "DVLP asset home with AI drug context inquiry panel",
-        aspect: "3576 / 2080",
-      },
-      {
-        src: "/work/studio-04.webp",
-        alt: "DVLP development plan explorer",
-        aspect: "3576 / 2080",
-      },
-      {
-        src: "/work/studio-02.webp",
-        alt: "DVLP entity data connections graph",
-        aspect: "3576 / 2080",
-      },
-      {
-        src: "/work/studio-09.webp",
-        alt: "DVLP portfolio scenario modeling timeline",
-        aspect: "3576 / 2080",
-      },
-      {
-        src: "/work/studio-03.webp",
-        alt: "DVLP virtual data room with document viewer",
-        aspect: "3576 / 2080",
-      },
-      {
-        src: "/work/studio-05.webp",
-        alt: "DVLP blockchain explorer",
-        aspect: "3576 / 2080",
-      },
-      {
-        src: "/work/studio-06.webp",
-        alt: "DVLP AI document builder",
-        aspect: "3576 / 2080",
-      },
-      {
-        src: "/work/studio-08.webp",
-        alt: "DVLP asset messaging",
-        aspect: "3576 / 2080",
-      },
-    ],
-  },
-  {
-    id: "dvlp-studio",
-    name: "DVLP Studio \u00b7 Design System",
-    year: "2025-26",
-    title: "DVLP Design System",
-    blurb:
-      "A lab-paper design system with one oxidized accent powering every DVLP surface: components, tokens with dark mode, type scale, and domain icons.",
-    headline:
-      "A lab-paper design system with one oxidized accent, powering every DVLP product surface",
-    stats: [
-      "Reusable component library",
-      "Design tokens + dark mode",
-      "Type scale + domain icons",
-      "Consistent cross-team UI",
-    ],
-    tint: "#faf6ec",
-    chipBg: "#dd4a05",
-    chipGlyph: "layers",
-    cardBg: "#ffffff",
-    stack: "Figma \u00b7 Tailwind v4 \u00b7 shadcn/ui \u00b7 Storybook \u00b7 Design tokens \u00b7 Lexical",
-    caseStudyHref: "/work/dvlp-design-system",
-    screenshots: [
-      {
-        src: "/work/ds-cover.webp",
-        alt: "DVLP lab-paper design system cover",
-        aspect: "16 / 9",
-      },
-      {
-        src: "/work/ds-palette.webp",
-        alt: "DVLP design system core color palette",
-        aspect: "4 / 3",
-      },
-      {
-        src: "/work/ds-wall.webp",
-        alt: "DVLP design system component wall",
-        aspect: "2 / 1",
-      },
-      {
-        src: "/work/ds-typeface.webp",
-        alt: "DVLP design system typeface specimen",
-        aspect: "4 / 3",
-      },
-      {
-        src: "/work/ds-typescale.webp",
-        alt: "DVLP design system type scale",
-        aspect: "16 / 9",
-      },
-      {
-        src: "/work/ds-buttons.webp",
-        alt: "DVLP design system action buttons in all states",
-        aspect: "4 / 3",
-      },
-      {
-        src: "/work/ds-cards.webp",
-        alt: "DVLP design system card components",
-        aspect: "4 / 3",
-      },
-    ],
-  },
-  {
-    id: "vidi",
-    name: "VIDI \u00b7 Agent Governance",
-    year: "2025-26",
-    title: "DVLP Agency",
-    blurb:
-      "A governance platform that puts policies, audit trails, and signed receipts around AI agents, with gated invocations and a live playground.",
-    headline:
-      "A governance and runtime platform that puts policies, audit trails, and signatures around AI agents",
-    stats: [
-      "Policy-gated invocations",
-      "Signed execution receipts",
-      "Full agent audit trail",
-      "Agent playground + live run graphs",
-    ],
-    tint: "#fff7ed",
-    chipBg: "#c2410c",
-    chipGlyph: "check-shield",
-    cardBg: "#ffffff",
-    caseStudyHref: "/work/vidi",
-    stack: "Next.js 16 \u00b7 React Flow \u00b7 GSAP \u00b7 Go (Echo) \u00b7 Cerbos \u00b7 CEL \u00b7 AWS KMS + Bedrock \u00b7 PostgreSQL \u00b7 Redis",
-    screenshots: [
-      {
-        src: "/work/vidi-new-01.webp",
-        alt: "VIDI overview: registry health, invocations, and policy decisions",
-        aspect: "3576 / 2080",
-      },
-      {
-        src: "/work/vidi-new-02.webp",
-        alt: "VIDI Guild agent detail with QA pipeline and trust posture",
-        aspect: "3576 / 2080",
-      },
-      {
-        src: "/work/vidi-new-03.webp",
-        alt: "VIDI playground formula run with live agent flow graph",
-        aspect: "3576 / 2080",
-      },
-      {
-        src: "/work/vidi-new-04.webp",
-        alt: "VIDI agent tool graph for direct invocation",
-        aspect: "3576 / 2080",
-      },
-      {
-        src: "/work/vidi-new-05.webp",
-        alt: "VIDI agents kanban in dark mode",
-        aspect: "3576 / 2080",
-      },
-      {
-        src: "/work/vidi-new-06.webp",
-        alt: "VIDI playground run setup in dark mode",
-        aspect: "3576 / 2080",
-      },
-    ],
-  },
-  {
     id: "hackaprompt",
     name: "HackAPrompt 2.0 · Learn Prompting",
     year: "2024-25",
@@ -883,10 +706,10 @@ function ProjectCard({ project }: { project: Project }) {
   } as const;
   return (
     <div
-      className="sticky top-0 flex h-[100svh] w-full flex-col overflow-hidden"
+      className="sticky top-6 flex h-[calc(100svh-48px)] w-full flex-col overflow-hidden"
       style={{
         background: project.cardBg,
-        borderRadius: "var(--radius-card) var(--radius-card) 0 0",
+        borderRadius: 24,
         boxShadow: "var(--shadow-sheet)",
       }}
     >
@@ -1082,7 +905,7 @@ export default function ProjectCards() {
     <section
       id="work"
       aria-label="Selected projects"
-      className="relative"
+      className="relative p-6"
       style={{ height: `${PROJECTS.length * SCROLL_PER_CARD_SVH}svh` }}
     >
       {PROJECTS.map((project) => (

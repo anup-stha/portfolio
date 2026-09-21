@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Reveal from "../dvlp-studio/Reveal";
+import Reveal from "@/components/Reveal";
+import ContentSpotlight from "@/components/ContentSpotlight";
 
 export const metadata: Metadata = {
   title: "HackAPrompt 2.0 — Case Study · Anup Shrestha",
@@ -115,6 +116,7 @@ function SectionHeading({
 export default function HackapromptPage() {
   return (
     <main className="w-full pb-6">
+      <ContentSpotlight />
       {/* ------------------------------------------------------ top bar -- */}
       <header className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-5 pt-8 sm:px-8">
         <Link
@@ -395,7 +397,7 @@ export default function HackapromptPage() {
               Next
             </p>
             <Link
-              href="/work/vidi"
+              href="/work/myra"
               className="group mt-3 inline-flex items-baseline gap-3 text-[color:var(--ink)]"
               style={{
                 fontFamily: SERIF,
@@ -404,7 +406,7 @@ export default function HackapromptPage() {
                 letterSpacing: "-0.01em",
               }}
             >
-              VIDI · Agent governance
+              Myra ERP · Rara Labs
               <span
                 aria-hidden="true"
                 className="transition-transform duration-200 ease-out group-hover:translate-x-1"
@@ -414,7 +416,7 @@ export default function HackapromptPage() {
             </Link>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
-                href="mailto:works.anupstha@gmail.com"
+                href="#contact"
                 className="inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-[15px] text-white transition-[background-color,transform] duration-200 ease-out hover:scale-[1.02] hover:bg-[#27272a] active:scale-[0.98]"
               >
                 works.anupstha@gmail.com

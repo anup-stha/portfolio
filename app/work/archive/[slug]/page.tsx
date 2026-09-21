@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import Reveal from "../../dvlp-studio/Reveal";
+import Reveal from "@/components/Reveal";
+import ContentSpotlight from "@/components/ContentSpotlight";
 import { ARCHIVE, getArchiveEntry } from "@/lib/archive";
 
 const MONO = "var(--font-mono-accent)";
@@ -42,6 +43,7 @@ export default async function ArchiveEntryPage({
 
   return (
     <main className="w-full pb-6">
+      <ContentSpotlight />
       {/* ------------------------------------------------------ top bar -- */}
       <header className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-5 pt-8 sm:px-8">
         <Link
@@ -300,7 +302,7 @@ export default async function ArchiveEntryPage({
           <Reveal amount={0.5}>
             <div className="flex flex-wrap items-center gap-4 border-t border-zinc-200 pt-10">
               <a
-                href="mailto:works.anupstha@gmail.com"
+                href="#contact"
                 className="inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-[15px] text-white transition-[background-color,transform] duration-200 ease-out hover:scale-[1.02] hover:bg-[#27272a] active:scale-[0.98]"
               >
                 works.anupstha@gmail.com

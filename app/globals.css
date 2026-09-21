@@ -102,3 +102,8 @@ h3 {
     scroll-behavior: auto !important;
   }
 }
+
+/* contact dialog: freeze the page behind the native modal */
+body:has(dialog[open]) {
+  overflow: hidden;
+}

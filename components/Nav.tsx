@@ -74,7 +74,7 @@ export default function Nav() {
 
 					<div className="flex items-center gap-3">
 						<motion.a
-							href="mailto:works.anupstha@gmail.com"
+							href="#contact"
 							whileHover={reduceMotion ? undefined : { scale: 1.04 }}
 							whileTap={reduceMotion ? undefined : { scale: 0.97 }}
 							className="flex min-h-11 items-center rounded-full bg-[var(--yellow)] px-4 text-[12px] uppercase tracking-[0.08em] text-[color:var(--ink)] sm:text-[13px]"
@@ -143,9 +143,9 @@ export default function Nav() {
 								: { clipPath: "inset(0 0 100% 0)" }
 						}
 						transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-						className="fixed inset-0 z-[var(--z-menu)] flex flex-col bg-[#050505] px-6 sm:px-10"
+						className="fixed inset-0 z-[var(--z-menu)] flex flex-col bg-[#050505]"
 					>
-						<div className="mx-auto flex w-full max-w-[1220px] flex-1 flex-col justify-center pt-[76px]">
+						<div className="mx-auto flex w-full max-w-[1220px] flex-1 flex-col justify-center px-6 pt-[76px] sm:px-10">
 							<ul className="flex flex-col gap-1">
 								{MENU_LINKS.map((link, i) => (
 									<motion.li
@@ -192,14 +192,14 @@ export default function Nav() {
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
 							transition={{ duration: 0.5, delay: reduceMotion ? 0 : 0.45 }}
-							className="mx-auto flex w-full max-w-[1220px] flex-col gap-2 pb-10 text-[12px] uppercase tracking-[0.08em] sm:flex-row sm:items-center sm:justify-between"
+							className="mx-auto flex w-full max-w-[1220px] flex-col gap-2 px-6 pb-10 text-[12px] sm:px-10 uppercase tracking-[0.08em] sm:flex-row sm:items-center sm:justify-between"
 							style={{
 								color: "var(--footer-muted, #8b8b94)",
 								fontFamily: "var(--font-mono-accent)",
 							}}
 						>
 							<a
-								href="mailto:works.anupstha@gmail.com"
+								href="#contact"
 								onClick={close}
 								className="transition-colors duration-200 hover:text-[#fafafa] focus-visible:outline-[#fafafa]"
 							>

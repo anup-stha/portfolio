@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Hanken_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
+import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
+import ContactDialog from "@/components/ContactDialog";
 
 const displayGrotesque = Bricolage_Grotesque({
   variable: "--font-display",
@@ -58,7 +60,22 @@ export default function RootLayout({
       lang="en"
       className={`${bodyGrotesk.variable} ${displayGrotesque.variable} ${monoAccent.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {/* Page-wide dotted glow, pinned behind everything */}
+        <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10">
+          <DottedGlowBackground
+            gap={14}
+            radius={1.4}
+            color="rgba(9,9,11,0.55)"
+            glowColor="rgba(253,207,0,0.9)"
+            opacity={0.25}
+            speedMin={0.2}
+            speedMax={0.7}
+          />
+        </div>
+        {children}
+        <ContactDialog />
+      </body>
     </html>
   );
 }
