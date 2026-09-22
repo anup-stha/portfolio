@@ -4,6 +4,7 @@ import "./globals.css";
 import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
 import ContactDialog from "@/components/ContactDialog";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const displayGrotesque = Bricolage_Grotesque({
   variable: "--font-display",
@@ -77,6 +78,7 @@ export default function RootLayout({
         {children}
         <ContactDialog />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
