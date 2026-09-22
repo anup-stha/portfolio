@@ -3,6 +3,7 @@ import { Bricolage_Grotesque, Hanken_Grotesk, Space_Mono } from "next/font/googl
 import "./globals.css";
 import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
 import ContactDialog from "@/components/ContactDialog";
+import { Analytics } from "@vercel/analytics/next";
 
 const displayGrotesque = Bricolage_Grotesque({
   variable: "--font-display",
@@ -75,6 +76,7 @@ export default function RootLayout({
         </div>
         {children}
         <ContactDialog />
+        <Analytics />
       </body>
     </html>
   );
